@@ -1,6 +1,6 @@
 {
   "name": "soundcloud-api-client",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Dead simple, promise-based Node.js library for interacting with the SoundCloud public API",
   "keywords": [
     "soundcloud",
@@ -10,14 +10,14 @@
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iammordarty/soundcloud-api-client.git"
+    "url": "https://github.com/iammordaty/soundcloud-api-client.git"
   },
-  "author": "iammordarty",
+  "author": "iammordaty",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iammordarty/soundcloud-api-client/issues"
+    "url": "https://github.com/iammordaty/soundcloud-api-client/issues"
   },
-  "homepage": "https://github.com/iammordarty/soundcloud-api-client#readme",
+  "homepage": "https://github.com/iammordaty/soundcloud-api-client#readme",
   "dependencies": {
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
