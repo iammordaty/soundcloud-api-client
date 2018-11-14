@@ -34,14 +34,14 @@ class SoundCloud {
      * @api public
      * @param {String} pathname
      * @param {String} filename
-     * @returns {Promise}
+     * @returns {undefined}
      */
     async download (pathname, filename) {
         const options = { encoding: null };
         const stream = await this.request(pathname, options);
         const buffer = Buffer.from(stream, 'utf8');
 
-        return fs.writeFile(filename, buffer);
+        fs.writeFileSync(filename, buffer);
     }
 
     /**
