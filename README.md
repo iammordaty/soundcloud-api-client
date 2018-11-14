@@ -9,6 +9,7 @@ Node.js module for the [SoundCloud API](http://soundcloud.com) API. See full API
   - [Usage](#usage)
   - [API](#api)
 - [Examples](#examples)
+- [Further informations](#further-informations)
 - [License](#license)
 
 ## Getting Started
@@ -33,7 +34,7 @@ const SoundCloud = require('soundcloud-api-client');
 const client_id = 'your-client-id';
 const soundcloud = new SoundCloud({ client_id });
 
-const q = 'live mix',
+const q = 'live mix';
 const genres = [ 'house', 'tech-house', 'techno' ].join(',');
 
 soundcloud.get('/tracks', { q, genres })
@@ -41,7 +42,7 @@ soundcloud.get('/tracks', { q, genres })
     .catch(e => /* handle error */);
 ```
 
-The next example demonstrates how to download the 10 most recent user comments.
+The next example demonstrates how to fetch 10 most recent user comments.
 
 ```js
 const user = 'user-name-or-id'; // user id is necessary to fetch user tracks
@@ -57,12 +58,12 @@ soundcloud.get(`/users/${user}/comments`, { offset, limit })
 
 The SoundCloud constructor accepts an `options` object which may contain one or more of the following options:
 
-* `client_id` - Your Client Id (required).
-* `hostname` - Override the default host API calls are issued to.
+* `client_id` – Your Client Id (required).
+* `hostname` – Override the default host API calls are issued to.
 
 ## Examples
 
-Various examples are [here](https://github.com/iammordaty/soundcloud-api-client/tree/master/examples).
+Various examples can be found in the [examples folder on github](https://github.com/iammordaty/soundcloud-api-client/tree/master/examples).
 
 ## Further informations
 
