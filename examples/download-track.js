@@ -10,8 +10,7 @@ const slugify = string => string.toString().toLowerCase()
 
 const trackId = 313004551;
 
-soundcloud.get(`/tracks/${trackId}`).then(track => {
-    const { id, title, stream_url } = track;
+soundcloud.get(`/tracks/${trackId}`).then(({ id, title, stream_url }) => {
     const slug = slugify(title);
     const filename = `${slug}.mp3`;
 
@@ -19,5 +18,5 @@ soundcloud.get(`/tracks/${trackId}`).then(track => {
 
     soundcloud.download(stream_url, filename)
         .then(() => console.log('Done!'))
-        .catch(e => console.log('Saving failed: ', e.message));
-}).catch(e => console.warn('An error occurred:', e.message));
+        .catch(({ message }) => console.log('Saving failed: ', message));
+}).catch(({ message }) => console.warn('An error occurred:', message));

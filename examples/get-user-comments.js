@@ -8,7 +8,7 @@ const limit = 10;
 const offset = 0;
 
 soundcloud.get(`/users/${username}/comments`, { limit, offset }).then(comments => {
-    console.log(`${limit} newest ${username} comments:`, "\n");
+    console.log(`${comments.length} ${username}'s recent comments:`, "\n");
 
-    comments.forEach(comment => console.log(`* ${comment.body}`));
-}).catch(e => console.warn('An error occurred:', e.message));
+    comments.forEach(({ body }) => console.log(`* ${body}`));
+}).catch(({ message }) => console.warn('An error occurred:', message));

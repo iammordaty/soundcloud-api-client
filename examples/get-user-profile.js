@@ -9,4 +9,4 @@ soundcloud.get(`/users/${username}`).then(user => {
     const stringifiedUser = JSON.stringify(user, null, 2);
 
     console.log(stringifiedUser);
-}).catch(e => console.warn('An error occurred:', e.message));
+}).catch(({ message }) => console.warn('An error occurred:', message));
