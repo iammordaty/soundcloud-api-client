@@ -1,6 +1,6 @@
 # soundcloud-api-client
 
-Node.js module for the [SoundCloud API](http://soundcloud.com) API. See full API documentation [here](https://developers.soundcloud.com/docs/api/reference).
+Node.js module for the [SoundCloud API](http://soundcloud.com). See full API documentation [here](https://developers.soundcloud.com/docs/api/reference).
 
 ## Table of Contents
 
@@ -9,12 +9,12 @@ Node.js module for the [SoundCloud API](http://soundcloud.com) API. See full API
   - [Usage](#usage)
   - [API](#api)
 - [Examples](#examples)
-- [Further informations](#further-informations)
+- [Further information](#further-information)
 - [License](#license)
 
 ## Getting Started
 
-In order to use module, you need to acquire a `client_id` for your application, which can be obtained from [SoundCloud for Developers page](https://developers.soundcloud.com/).
+In order to use the module, you need to acquire a `client_id` for your application, which can be obtained from [SoundCloud for Developers page](https://developers.soundcloud.com/).
 
 ### Installation
 
@@ -26,7 +26,7 @@ $ npm install --save soundcloud-api-client
 
 ### Usage
 
-The following example shows how to initialize library and perform a search request with sample criteria.
+The following example shows how to initialize the library and perform a search request with sample criteria.
 
 ```js
 const SoundCloud = require('soundcloud-api-client');
@@ -56,16 +56,34 @@ soundcloud.get(`/users/${user}/comments`, { offset, limit })
 
 ### API
 
-The SoundCloud constructor accepts an `options` object which may contain one or more of the following options:
+The main export of this library is the SoundCloud class.
 
-* `client_id` – Your Client Id (required).
-* `hostname` – Override the default host API calls are issued to.
+#### SoundCloud
+
+The SoundCloud constructor accepts a `config` object which may contain one or more of the following options:
+
+* `client_id` – Your client Id (required)
+* `hostname` – Override the default host API calls are issued to
+
+#### get
+
+Performs a get request. The method takes two parameters:
+
+* `pathname` – Request pathname or URL (required)
+* `params` – Request parameters (see API documentation page for possible values)
+
+#### download
+
+Saves the specified resource to the local file system. The method takes two parameters:
+
+* `pathname` – Remote pathname or URL (required)
+* `filename` – Local pathname (required)
 
 ## Examples
 
-Various examples can be found in the [examples folder on github](https://github.com/iammordaty/soundcloud-api-client/tree/master/examples).
+Various examples can be found in the [examples directory on GitHub.com](https://github.com/iammordaty/soundcloud-api-client/tree/master/examples).
 
-## Further informations
+## Further information
 
  - [SoundCloud HTTP API Reference](https://developers.soundcloud.com/docs/api/reference)
 
