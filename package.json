@@ -1,6 +1,6 @@
 {
   "name": "soundcloud-api-client",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Dead simple, promise-based Node.js library for interacting with the SoundCloud public API",
   "keywords": [
     "soundcloud",
