@@ -1,6 +1,6 @@
 {
   "name": "soundcloud-api-client",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Dead simple, promise-based Node.js library for interacting with the SoundCloud public API",
   "keywords": [
     "soundcloud",
@@ -14,6 +14,7 @@
   },
   "author": "iammordaty",
   "license": "MIT",
+  "runkitExampleFilename": "./examples/get-tracks.runkit.js",
   "bugs": {
     "url": "https://github.com/iammordaty/soundcloud-api-client/issues"
   },
