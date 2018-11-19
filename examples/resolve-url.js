@@ -14,8 +14,8 @@ soundcloud.get('/resolve', { url })
         return soundcloud.get(`/users/${id}/tracks`, { limit });
     })
     .then(tracks => {
-        console.log(`${tracks.length} recent tracks:`, '\n');
+        console.log(`${tracks.length} recent tracks:\n`);
 
         tracks.forEach(({ title }) => console.log(`* ${title}`));
     })
-    .catch(({ message }) => console.warn('An error occurred:', message));
+    .catch(({ message }) => console.error('An error occurred:', message));
