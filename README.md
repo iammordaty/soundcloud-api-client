@@ -81,7 +81,7 @@ Saves the specified resource to the local file system. The method takes two para
 
 ## Examples
 
-Various examples can be found in the [examples directory on GitHub.com](https://github.com/iammordaty/soundcloud-api-client/tree/master/examples).
+Various examples can be found in the [examples directory on GitHub.com](https://github.com/iammordaty/soundcloud-api-client/tree/master/examples). Also have a look at the [RunKit](https://npm.runkit.com/soundcloud-api-client), where you can test this library.
 
 ## Further information
 

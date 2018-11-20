@@ -14,7 +14,7 @@
   },
   "author": "iammordaty",
   "license": "MIT",
-  "runkitExampleFilename": "./examples/get-tracks.runkit.js",
+  "runkitExampleFilename": "./examples/runkit.js",
   "bugs": {
     "url": "https://github.com/iammordaty/soundcloud-api-client/issues"
   },
